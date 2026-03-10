@@ -13,7 +13,35 @@ Ensure you have installed:
 
 ### 1. Setup
 
-Clone the repo locally and install the NPM dependencies using npm:
+Clone the repo locally and install the project dependencies with the provided `Makefile`:
+
+```bash
+make install
+```
+
+To run the common local workflow with the provided `Makefile`:
+
+```bash
+make help
+make install
+make compile
+make test
+```
+
+Useful `make` targets:
+
+- `make test` runs the Hardhat test suite
+- `make test-stack` runs the tests with stack traces enabled
+- `make compile` compiles the smart contracts
+- `make lint` lints Solidity contracts
+- `make clean` removes generated build artifacts
+- `make deploy` deploys to the local `test` network at `http://127.0.0.1:8545`
+
+If you want to use `make deploy`, start a local Hardhat node in a separate terminal first:
+
+```bash
+npx hardhat node
+```
 
 ### 2. Task
 
